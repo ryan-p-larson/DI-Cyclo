@@ -1,15 +1,15 @@
-Nation,Abrv,Men,FEMALE ,Total,Lat,LONG
-Argentina,ARG,0,1,1,38.4161,63.6167
-Australia,AUS,2,0,2,25.2744,133.7751
+Nation,Abrv,Male,Female,Total,Lat,Lon
+Argentina,ARG,0,1,1,-34.6037,-58.3816
+Australia,AUS,2,0,2,-33.8688,151.2093
 Belgium,BEL,17,4,21,50.5039,4.4699
-Canada,CAN,8,7,15,56.1304,106.3468
-Czech Republic,CZE,0,1,1,49.8175,15.473
+Canada,CAN,8,7,15,45.4215,-75.6972
+Czech Rep.,CZE,0,1,1,49.8175,15.473
 Estonia,EST,1,0,1,58.5953,25.0136
 France,FRA,4,2,6,46.2276,2.2137
-Great Britain,GBR,1,2,3,55.3781,3.436
+United Kingdom,GBR,1,2,3,55.3781,3.436
 Germany,GER,3,0,3,51.1657,10.4515
 Ireland,IRL,0,1,1,53.4129,8.2439
 Italy,ITA,0,1,1,41.8719,12.5674
 Luxembourg,LUX,1,0,1,49.8153,6.1296
 Netherlands,NED,3,1,4,52.1326,5.2913
-United States Of America,USA,16,18,34,37.0902,95.7129
+United States,USA,16,18,34,41.6611,-91.5302
