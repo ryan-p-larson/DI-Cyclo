@@ -9,25 +9,31 @@ var svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height);
 
-// Geo graphic stuff
-//[-91.530167, 41.661129] Iowa City
+// Geographic stuff
 var projection = d3.geoMercator()
-    .scale(150)
+    .scale(195)
+    // Make IC the middle
+    .rotate([91, 0])
+    .center([0, 21])
     .translate([width / 2, height / 2]);
 var path = d3.geoPath()
     .pointRadius(2)
     .projection(projection);
-var iowaCity = projection([-91.530167, 41.661129]);
+var iowaCity = [-91.530167, 41.661129];
 
-// Path creation function (all roads lead to iowa city)
-function 
+
+// Interaction functions
+function mouseIn(country) {
+  d3.select(this)
+    .style('stroke-width', function(d) { return +d.Total; })
+    .style('stroke-opacity', 1);
+}
 
 // Drawing function
 function loadFiles(error, world, cyclocross) {
 
-
     // set the color domain based on the cyclocross entrants
-    color.domain([0, d3.max(cyclocross, function(d) { return d.Total; })]);
+    color.domain([0, d3.max(cyclocross, function(d) { return +d.Total; })]);
 
 
     // Add the map
@@ -51,8 +57,17 @@ function loadFiles(error, world, cyclocross) {
                     y = center[1];
                 return 'translate(' + x + ', ' + y +')';
         })
-        .attr('r', 5);
-        
+        .attr('r', function(d) { return Math.sqrt(d.Total) * 1.5; });
+
+    // travel routes
+    svg.append('g').attr('class', 'travel')
+      .selectAll('.path')
+        .data(cyclocross)
+      .enter().append('path')
+      .attr('d', function(d) { return path({type: "LineString", coordinates: [[+d.Lon, +d.Lat], iowaCity]}); })
+      .style('stroke', '#fff')
+      .style('stroke-width', function(d) { return Math.sqrt(d.Total); })
+      .on('mouseover', mouseIn);
 
 }
 
