@@ -19,6 +19,9 @@ var path = d3.geoPath()
     .projection(projection);
 var iowaCity = projection([-91.530167, 41.661129]);
 
+// Path creation function (all roads lead to iowa city)
+function 
+
 // Drawing function
 function loadFiles(error, world, cyclocross) {
 
