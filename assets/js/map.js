@@ -36,7 +36,7 @@ var iowaCity = [-91.530167, 41.661129];
 
 
 // Bar chart vars
-var barWidth = 225,
+var barWidth = 200,
     barHeight = 200;
 var x = d3.scaleLinear()
         .domain([0, 35])
@@ -45,8 +45,8 @@ var x = d3.scaleLinear()
         .range([0, barHeight])
         .padding(0.1)
         .align(0.1),
-    xAxis = d3.axisTop(x),
-    yAxis = d3.axisLeft(y);
+    xAxis = d3.axisTop(x).tickValues([0, 10, 20, 30, 35]),
+    yAxis = d3.axisLeft(y).tickSize(0);
 
 
 // Interaction functions
