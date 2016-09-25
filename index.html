@@ -17,18 +17,20 @@
       stroke-linejoin: round;
       vector-effect: non-scaling-stroke;
   }
-  .circle {
-    fill: #000;
+  .y-axis path {
+    display: none;
   }
-  .travel {
-    fill: none;
-    stroke-width: 1;
-    stroke-opacity: 0.75;
-    stroke-linecap: round;
+  .barLabel {
+    font-size: 11px;
   }
+
   </style>
 </head>
 
 <body>
+    <div>
+      <div id="map"></div>
+      <div id="bars"></div>
+    </div>
     <script src="assets/js/map.js"></script>
 </body>
