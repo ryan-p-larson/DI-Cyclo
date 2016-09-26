@@ -1,6 +1,8 @@
 # DI-Cyclo
 Daily Iowan Cyclocross Map
 
+<img src="examples/draft-01.png"></img>
+
 #### Tutorials
 - [Let's make a map (M. Bostock)](https://bost.ocks.org/mike/map/)
 - [Bar Chart (M. Bostock)](http://bl.ocks.org/mbostock/3886208)
